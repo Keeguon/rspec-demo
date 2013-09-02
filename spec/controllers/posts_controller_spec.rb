@@ -32,7 +32,7 @@ describe PostsController do
 
   describe "GET index" do
     it "assigns all posts as @posts" do
-      post = Post.create! valid_attributes
+      post = FactoryGirl.create(:post, valid_attributes)
       get :index, {}, valid_session
       assigns(:posts).should eq([post])
     end
@@ -40,7 +40,7 @@ describe PostsController do
 
   describe "GET show" do
     it "assigns the requested post as @post" do
-      post = Post.create! valid_attributes
+      post = FactoryGirl.create(:post, valid_attributes)
       get :show, {:id => post.to_param}, valid_session
       assigns(:post).should eq(post)
     end
@@ -55,7 +55,7 @@ describe PostsController do
 
   describe "GET edit" do
     it "assigns the requested post as @post" do
-      post = Post.create! valid_attributes
+      post = FactoryGirl.create(:post, valid_attributes)
       get :edit, {:id => post.to_param}, valid_session
       assigns(:post).should eq(post)
     end
