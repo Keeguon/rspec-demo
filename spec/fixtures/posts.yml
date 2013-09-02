@@ -1,0 +1,9 @@
+first:
+  title: "Hello World!"
+  body: "Hello from France."
+  published: true
+
+second:
+  title: "Another great story"
+  body: "Yadda yadda yadda"
+  published: false

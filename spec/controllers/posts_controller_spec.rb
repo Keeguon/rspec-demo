@@ -32,9 +32,10 @@ describe PostsController do
 
   describe "GET index" do
     it "assigns all posts as @posts" do
-      post = FactoryGirl.create(:post, valid_attributes)
+      posts = Post.all
+      post  = FactoryGirl.create(:post, valid_attributes)
       get :index, {}, valid_session
-      assigns(:posts).should eq([post])
+      assigns(:posts).should eq(posts.push post)
     end
   end
 
